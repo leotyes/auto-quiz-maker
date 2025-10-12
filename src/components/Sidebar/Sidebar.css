@@ -1,0 +1,89 @@
+.sidebar {
+  width: 220px;
+  padding: 24px 20px;
+  background: #0F1126;
+  border-right: 1px solid #2C2C2C;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar__button {
+  padding: 12px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar__button:focus {
+  outline: none;
+}
+
+.sidebar__button:hover {
+  background: #1B2038;
+  border-color: #35407A;
+}
+
+.sidebar__button--active {
+  background: #1C2A54;
+  border-color: #3C4A8C;
+  color: #93c5fd;
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar__logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1B2C6F, #1E40AF);
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+.sidebar__brand-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #F3F4F6;
+  letter-spacing: 0.5px;
+}
+
+.sidebar__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar__button--secondary {
+  margin-top: auto;
+  background: rgba(27, 32, 56, 0.6);
+  border-color: rgba(60, 74, 140, 0.4);
+  color: #cbd5f5;
+}
+
+.sidebar__button--secondary:hover {
+  background: rgba(27, 32, 56, 0.85);
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #e0e7ff;
+}

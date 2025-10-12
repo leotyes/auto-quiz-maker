@@ -1,0 +1,10 @@
+.quiz-grid {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+  padding-top: 6rem;
+  justify-items: start;
+  justify-content: start;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
