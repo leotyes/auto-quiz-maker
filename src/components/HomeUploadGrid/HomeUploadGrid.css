@@ -1,0 +1,30 @@
+.home-upload-previews {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1rem;
+  align-items: flex-start;
+  max-width: calc(100vw - 32rem);
+}
+
+.home-upload-previews::-webkit-scrollbar {
+  height: 10px;
+}
+.home-upload-previews::-webkit-scrollbar-track {
+  background: rgba(18,12,36,0.45);
+  border-radius: 8px;
+}
+.home-upload-previews::-webkit-scrollbar-thumb {
+  background: #6b3ed6;
+  border-radius: 8px;
+  border: 2px solid rgba(18,12,36,0.35);
+}
+.home-upload-previews::-webkit-scrollbar-thumb:hover {
+  background: #7C4DFF;
+}
+
+.home-upload-previews {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124,77,255,0.95) rgba(18,12,36,0.45);
+}

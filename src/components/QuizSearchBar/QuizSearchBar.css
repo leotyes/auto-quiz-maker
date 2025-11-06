@@ -1,10 +1,10 @@
 .quiz-searchbar {
-  width: 40%;
-  min-width: 800px;
+  width: 40vw;
   pointer-events: auto;
   margin: 0 auto 2rem auto;
   display: flex;
   justify-content: center;
+  min-width: 0;
 }
 
 .quiz-searchbar__inner {

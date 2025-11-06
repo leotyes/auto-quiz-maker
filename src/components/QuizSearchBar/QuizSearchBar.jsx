@@ -2,16 +2,13 @@ import "./QuizSearchBar.css";
 import { Search, X } from "lucide-react";
 import { useState } from "react";
 
-export default function QuizSearchBar() {
-    const [query, setQuery] = useState("");
-
+export default function QuizSearchBar({ query, setQuery }) {
     function clearInput() {
         setQuery("");
     }
 
     return (
         <div className="quiz-searchbar" role="search" aria-label="Search quizzes">
-
             <div className="quiz-searchbar__inner">
                 <Search className="quiz-searchbar__icon" aria-hidden="true" />
                 <input

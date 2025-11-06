@@ -14,6 +14,13 @@
 .layout__main {
   flex: 1;
   padding: 4rem 3rem;
+  margin-left: 220px;
+  transition: margin-left 0.2s;
+  min-width: 0;
+}
+
+.layout__main--collapsed {
+  margin-left: 93px !important;
 }
 
 .logo {
@@ -50,4 +57,31 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.main-content-row {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0;
+    gap: 0rem;
+}
+
+.quiz-grid-wrapper {
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background: #181a2b;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6b3ed6;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #10111F;
 }

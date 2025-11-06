@@ -1,0 +1,74 @@
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.file-loader {
+  animation: spin 2s linear infinite;
+  transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-transform-box: fill-box;
+  display: inline-block;
+  margin-left: .25rem;
+}
+
+.file-loader svg {
+  display: block;
+  transform-origin: center center;
+  transform-box: fill-box;
+  -webkit-transform-box: fill-box;
+}
+
+.file-card {
+  position: relative;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  background: rgba(35,32,58,0.28);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 0.6rem;
+  border-radius: 10px;
+  flex: 0 0 auto;
+}
+
+.file-card__remove {
+  position: static;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: rgba(230,230,230,0.9);
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 120ms, transform 120ms;
+}
+
+.file-card__remove:focus {
+  outline: none;
+}
+
+.file-card__remove:hover {
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-1px);
+}
+.file-card__remove svg {
+  width: 14px;
+  height: 14px;
+}
+
+.file-info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.file-name, .file-meta {
+  width: 100%;
+  display: block;
+  text-align: center;
+}

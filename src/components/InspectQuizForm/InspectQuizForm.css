@@ -1,0 +1,44 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field__label {
+  font-size: 1rem;
+  color: #cfcfe0;
+}
+
+.field__input {
+  background: rgba(30,28,40,0.5);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #e6e6e6;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.inspect-quiz__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  justify-content: flex-end;
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #e6e6e6;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: linear-gradient(180deg, rgba(124,77,255,0.14), rgba(124,77,255,0.06));
+  border-color: rgba(124,77,255,0.18);
+  font-weight: 600;
+}

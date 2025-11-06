@@ -1,0 +1,16 @@
+.inspect-quiz__preview {
+  overflow: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+  border-radius: 12px;
+  background: rgba(35, 32, 58, 0.18);
+  border: 1px dashed rgba(124, 77, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(200,200,210,0.5);
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow: auto;
+}
+

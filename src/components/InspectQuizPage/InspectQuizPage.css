@@ -1,0 +1,100 @@
+.inspect-quiz {
+  display: grid;
+  grid-template-columns: 3fr 360px;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  height: 100vh;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+.inspect-quiz__left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.inspect-quiz__meta {
+  margin-top: auto;
+  position: sticky;
+  bottom: 0rem;
+  background: rgba(20,18,30,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.inspect-quiz__meta-heading {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e6e6e6;
+}
+
+.inspect-quiz__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 25vh;
+  overflow: auto;
+  padding-right: 0.5rem;    
+  scrollbar-gutter: stable;
+}
+
+@media (max-width: 900px) {
+  .inspect-quiz {
+    grid-template-columns: 1fr;
+  }
+
+  .inspect-quiz__right {
+    order: 2;
+  }
+
+  .inspect-quiz__left {
+    order: 1;
+  }
+}
+
+.inspect-quiz,
+/* .inspect-quiz__preview, */
+.pdf-viewer,
+.inspect-quiz__form {
+  scrollbar-gutter: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #6b3ed6 rgba(18,12,36,0.45);
+}
+
+.inspect-quiz::-webkit-scrollbar,
+/* .inspect-quiz__preview::-webkit-scrollbar, */
+.pdf-viewer::-webkit-scrollbar,
+.inspect-quiz__form::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.inspect-quiz::-webkit-scrollbar-track,
+/* .inspect-quiz__preview::-webkit-scrollbar-track, */
+.pdf-viewer::-webkit-scrollbar-track,
+.inspect-quiz__form::-webkit-scrollbar-track {
+  background: rgba(18,12,36,0.45);
+  border-radius: 8px;
+}
+
+.inspect-quiz::-webkit-scrollbar-thumb,
+/* .inspect-quiz__preview::-webkit-scrollbar-thumb, */
+.pdf-viewer::-webkit-scrollbar-thumb,
+.inspect-quiz__form::-webkit-scrollbar-thumb {
+  background: #6b3ed6;
+  border-radius: 8px;
+  border: 2px solid rgba(18,12,36,0.35);
+}
+
+.inspect-quiz::-webkit-scrollbar-thumb:hover,
+/* .inspect-quiz__preview::-webkit-scrollbar-thumb:hover, */
+.pdf-viewer::-webkit-scrollbar-thumb:hover,
+.inspect-quiz__form::-webkit-scrollbar-thumb:hover {
+  background: #7C4DFF;
+}

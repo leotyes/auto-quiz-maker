@@ -1,0 +1,30 @@
+.username-topbar {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(20,18,30,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #e6e6e6;
+  z-index: 1200;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.25);
+  font-weight: 600;
+  cursor: default;
+}
+
+.username-topbar__icon {
+  width: 18px;
+  height: 18px;
+  color: #cfcfe0;
+  display: block;
+}
+
+.username-topbar__text {
+  font-size: 0.95rem;
+  color: #e6e6e6;
+  white-space: nowrap;
+}
