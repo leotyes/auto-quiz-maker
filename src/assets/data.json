@@ -1,0 +1,12 @@
+{
+    "quizzes":[
+        { "id": 1, "name": "Abc", "questions": 7, "lastEdited": "2025-01-01T00:00:00-05:00", "subject": "Math", "created": "2024-01-01T00:00:00-05:00" },
+        { "id": 2, "name": "Def", "questions": 6, "lastEdited": "2025-01-02T00:00:00-05:00", "subject": "Physics", "created": "2024-01-02T00:00:00-05:00" },
+        { "id": 3, "name": "Abg", "questions": 5, "lastEdited": "2025-01-03T00:00:00-05:00", "subject": "English", "created": "2024-01-03T00:00:00-05:00" },
+        { "id": 4, "name": "Quiz 4", "questions": 4, "lastEdited": "2025-01-04T00:00:00-05:00", "subject": "French", "created": "2024-01-04T00:00:00-05:00" },
+        { "id": 5, "name": "Quiz 5", "questions": 3, "lastEdited": "2025-01-05T00:00:00-05:00", "subject": "Chemistry", "created": "2024-01-05T00:00:00-05:00" },
+        { "id": 6, "name": "Quiz 6", "questions": 2, "lastEdited": "2025-01-06T00:00:00-05:00", "subject": "Economics", "created": "2024-01-06T00:00:00-05:00" },
+        { "id": 7, "name": "Quiz 7", "questions": 1, "lastEdited": "2025-01-07T00:00:00-05:00", "subject": "Theory of Knowledge", "created": "2024-01-07T00:00:00-05:00" }
+    ]
+}
+    

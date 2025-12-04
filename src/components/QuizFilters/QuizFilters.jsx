@@ -42,13 +42,12 @@ export default function QuizFilters({ subjectFilters, setSubjectFilters, subject
                         <ChevronDown className="quiz-filters-dropdown-arrow" />
                     )}
                     {sortOpen && (
-                        <ul className="custom-dropdown-options" role="listbox">
+                        <ul className="custom-dropdown-options">
                             {options.map((option, index) => (
                                 <li
                                     key={index}
                                     className={`custom-dropdown-option${option === sortingMode ? " selected" : ""}`}
                                     onClick={() => handleSortSelect(index)}
-                                    role="option"
                                 >
                                     {option}
                                 </li>

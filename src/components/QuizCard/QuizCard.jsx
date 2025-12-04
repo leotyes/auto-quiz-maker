@@ -20,19 +20,19 @@ export default function QuizCard({ id, name, questions, lastEdited, subject, del
 				
 			</div>
 			<div className="quiz-card__actions">
-				<button className="quiz-card__action" aria-label="Edit">
+				<button className="quiz-card__action">
 					<Edit className="quiz-card__icon" />
 				</button>
 
-				<button className="quiz-card__action" aria-label="Preview">
+				<button className="quiz-card__action">
 					<Eye className="quiz-card__icon" />
 				</button>
 
-				<button className="quiz-card__action" aria-label="Export">
+				<button className="quiz-card__action">
 					<Download className="quiz-card__icon" />
 				</button>
 				
-				<button className="quiz-card__action" aria-label="Delete" onClick={deleteQuiz} >
+				<button className="quiz-card__action" onClick={deleteQuiz} >
 					<Trash2 className="quiz-card__icon" />
 				</button>
 			</div>

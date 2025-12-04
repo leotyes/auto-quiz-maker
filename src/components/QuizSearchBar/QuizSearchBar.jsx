@@ -8,9 +8,9 @@ export default function QuizSearchBar({ query, setQuery }) {
     }
 
     return (
-        <div className="quiz-searchbar" role="search" aria-label="Search quizzes">
+        <div className="quiz-searchbar">
             <div className="quiz-searchbar__inner">
-                <Search className="quiz-searchbar__icon" aria-hidden="true" />
+                <Search className="quiz-searchbar__icon" />
                 <input
                     id="quiz-search-input"
                     className="quiz-searchbar__input"
@@ -22,10 +22,9 @@ export default function QuizSearchBar({ query, setQuery }) {
                     <button
                         className="quiz-searchbar__clear"
                         type="button"
-                        aria-label="Clear search"
                         onClick={clearInput}
                     >
-                        <X className="quiz-searchbar__icon" aria-hidden="true" />
+                        <X className="quiz-searchbar__icon" />
                     </button>
                 )}
             </div>

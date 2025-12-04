@@ -183,7 +183,7 @@
 .btn--primary {
   padding: 10px 12px;
   font-size: 0.95rem;
-  background: rgba(124,77,255,0.08);    /* light accent fill */
+  background: rgba(124,77,255,0.08);
   border: 1px solid rgba(124,77,255,0.18);
   box-shadow: none;
   color: #efeaff;

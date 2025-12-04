@@ -1,20 +1,26 @@
 import "./EnterAccountPage.css";
-import { Mail, Lock, Eye, EyeOff } from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, Check, X } from "lucide-react";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function EnterAccountPage() {
 	const [password, setPassword] = useState("");
+	const [confirmPassword, setConfirmPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-
-	function handleLogIn(formData) {
-		console.log("sign in", { email, password });
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [enterMode, setEnterMode] = useState(false);
+    const passwordsMatch = password !== "" && confirmPassword === password;
+    const navigate = useNavigate();
+	
+    function handleLogIn(formData) {
+        navigate("/");
 	}
 
 	return (
 		<div className="enter-account-page">
 			<div className="enter-account-card">
 				<header className="enter-account-card__head">
-					<div className="enter-account-card__logo">Log In</div>
+					<div className="enter-account-card__logo">{enterMode === false ? "Log In" : "Sign Up"}</div>
 				</header>
 
 				<main className="enter-account-card__body">
@@ -57,7 +63,7 @@ export default function EnterAccountPage() {
                                 </button>
 							</div>
 
-							<div className="form-field__forgot">
+							{enterMode === false ? (<div className="form-field__forgot">
 								<a
 									href="#"
 									className="link--muted link--small"
@@ -67,11 +73,36 @@ export default function EnterAccountPage() {
 								>
 									Forgot password?
 								</a>
-							</div>
+							</div>) : ""}
 						</label>
 
+                        {enterMode === true ? (
+                            <label className="form-field">
+                                <div className="form-field__label">Confirm Password</div>
+                                <div className="form-field__row">
+                                    {passwordsMatch ? <Check className="form-field__icon" /> : <X className="form-field__icon" />}
+                                    <input
+                                        className="form-field__input"
+                                        type={showConfirmPassword ? "text" : "password"}
+                                        value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                        placeholder="Confirm password"
+                                        name="confirmPassword"
+                                        required
+                                        autoComplete="current-password"
+                                    />
+                                    <button
+                                        type="button"
+                                        className="password-toggle"
+                                        onClick={() => setShowConfirmPassword((prev) => !prev)}
+                                    >
+                                        {confirmPassword !== "" ? (showConfirmPassword ? <EyeOff /> : <Eye />) : ""}
+                                    </button>
+                                </div>
+                            </label>) : ""}
+
 						<button type="submit" className="btn btn--primary">
-							Log in
+							{enterMode === false ? "Log in" : "Sign up"}
 						</button>
 						<button
 							type="button"
@@ -79,20 +110,17 @@ export default function EnterAccountPage() {
 							onClick={() => {
 							}}
 						>
-							<span className="btn__label">Log in with Google</span>
+							<span className="btn__label">{enterMode === false ? "Log in with Google" : "Sign up with Google"}</span>
 						</button>
 
-						<div className="create-account-link">
-							<a
-								className="link--muted"
-								href="#"
-								onClick={(e) => {
-									e.preventDefault();
-								}}
-							>
-								Don't have an account yet? Create one
-							</a>
-						</div>
+						
+                            <div className="create-account-link">
+                                <Link to={enterMode === false ? "/signup" : "/login"}>
+                                    <p className="link--muted" onClick={() => setEnterMode((prev) => !prev)}>
+                                        {enterMode === false ? "Don't have an account yet? Create one" : "Already have an account? Log in"}
+                                    </p>
+                                </Link>
+                            </div>
 					</form>
 				</main>
 			</div>
