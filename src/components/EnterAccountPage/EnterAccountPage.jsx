@@ -2,6 +2,7 @@ import "./EnterAccountPage.css";
 import { Mail, Lock, Eye, EyeOff, Check, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useUserStore } from "../../stores/userStore";
 
 export default function EnterAccountPage() {
 	const [password, setPassword] = useState("");
@@ -10,9 +11,16 @@ export default function EnterAccountPage() {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [enterMode, setEnterMode] = useState(false);
     const passwordsMatch = password !== "" && confirmPassword === password;
+    const setUser = useUserStore((state) => state.setUser);
     const navigate = useNavigate();
 	
     function handleLogIn(formData) {
+        const dataObject = Object.fromEntries(formData);
+        const userObject = {
+            userId: 1,
+            username: dataObject.email
+        }
+        setUser(userObject);
         navigate("/");
 	}
 

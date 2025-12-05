@@ -7,7 +7,6 @@ import { useLoaderData, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function InspectQuizPage() {
-
     const { quizId } = useParams(); // I could also use Zustand and Query to get the stored data
     const quizData = useLoaderData();
 
